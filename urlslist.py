@@ -1,9 +1,3 @@
-import webbrowser
-import os
-import time
-import threading
-
-threads = []
 lst = ["https://cutt.ly/shMIIid", "https://cutt.ly/uhMISOT",
        "https://cutt.ly/ThMICtj", "https://cutt.ly/3hMINtA",
        "https://cutt.ly/nhMIMKX", "https://cutt.ly/9hMI0Bg",
@@ -34,25 +28,3 @@ lst = ["https://cutt.ly/shMIIid", "https://cutt.ly/uhMISOT",
        "https://cutt.ly/ihMLljm", "https://cutt.ly/ghMLzrf",
        "https://cutt.ly/ahMLxwf", "https://cutt.ly/khMLx7d",
        "https://cutt.ly/bhMLcRu", "https://cutt.ly/0hMLvla"]
-
-
-def fuckIt(performTime):
-    key = True
-    count = 0
-
-    while key:
-        for link in lst:
-            webbrowser.open(link)
-        count += 1
-        print("Count: ", count)
-
-        if performTime == count:
-            time.sleep(30)
-            os.system("taskkill /im chrome.exe")
-            key = False
-
-    print("End")
-
-
-threads.append(threading.Thread(target=fuckIt(20)))
-map(lambda x: x.start(), threads)
