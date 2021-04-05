@@ -15,6 +15,7 @@ def log_in(times):
         for j in lst:
             driver = webdriver.Chrome(PATH)
             driver.get(j)
+            
             loginField = driver.find_element_by_id('username')
             loginField.clear()
             loginField.send_keys(loginVNS)
