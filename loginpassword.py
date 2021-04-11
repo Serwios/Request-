@@ -1,2 +1,2 @@
-loginVNS = 'yourLogin'
-pswdVNS = 'yourPassword' 
+loginVNS = ''
+pswdVNS = '' 
